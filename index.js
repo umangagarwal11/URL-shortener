@@ -3,7 +3,10 @@ const app=express();
 const mongoose=require('mongoose');
 const ShortUrls = require('./models/shortURL');
 
-mongoose.connect('mongodb://localhost/urlShortener',{
+mongoose.connect('mongodb+srv://iste.dedq8.mongodb.net/urlShortener?retryWrites=true&w=majority/',{
+  dbName:'urlShortener',
+  user:'istevit',
+  pass:'istevit',
   useNewUrlParser: true, useUnifiedTopology:true
 });
 
