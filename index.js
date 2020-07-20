@@ -22,10 +22,11 @@ app.get('/admin',async (req,res) =>{
   res.render('index',{shortUrls:shortUrls});
 });
 
-app.post('/admin',async (req,res) => {
-  await ShortUrls.create({full:req.body.fullUrl, short:req.body.shortUrl});
+app.post('/admin',(req,res) => {
+  ShortUrls.create({full:req.body.fullUrl, short:req.body.shortUrl}).then(()=>{
   const shortUrls=await ShortUrls.find();
   res.render('index',{shortUrls:shortUrls});
+});
 });
 
 app.get('/:short', async (req,res) => {
