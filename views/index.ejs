@@ -15,7 +15,7 @@
       <input required placeholder="Original Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
       <label for="shortUrl" class="sr-only">Short Url</label>
       <input required placeholder="Short Url" type="text" name="shortUrl" id="fullUrl" class="form-control col mr-2">
-      <button class="btn btn-success" type="submit">Shrink</button>
+      <button class="btn btn-success" type="submit" id="btn">Shrink</button>
     </form>
 
     <table class="table table-striped table-responsive">
@@ -35,5 +35,10 @@
       </tbody>
     </table>
   </div>
+  <script>
+  $("#btn").click(function(){
+  location.reload(true);
+});
+</script>
 </body>
 </html>
