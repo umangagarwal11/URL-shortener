@@ -24,7 +24,7 @@ app.get('/admin',async (req,res) =>{
 
 app.post('/admin', async (req,res) => {
   await ShortUrls.create({full:req.body.fullUrl, short:req.body.shortUrl}, function(err){
-  res.redirect('/');
+  res.redirect('/admin');
   });
 });
 
